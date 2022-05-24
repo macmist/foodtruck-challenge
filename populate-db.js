@@ -15,11 +15,11 @@ fs.createReadStream(path.resolve(__dirname, 'assets', 'Mobile_Food_Facility_Perm
     if (row.Latitude != 0 && row.Longitude  != 0 && row.Status === 'APPROVED') {
         let truck  = {
             locationId: row.locationid,
-            applicant: row.applicant,
-            facilityType: row.facilityType,
+            applicant: row.Applicant,
+            facilityType: row.FacilityType,
             cnn: row.cnn,
             description: row.LocationDescription,
-            Address: row.Address,
+            address: row.Address,
             blockLot: row.blocklot,
             block: row.block,
             lot: row.lot,
