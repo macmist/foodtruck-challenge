@@ -1,0 +1,4 @@
+{
+  "db": "mongodb://localhost/foodtruck-test",
+  "port": 3001
+}

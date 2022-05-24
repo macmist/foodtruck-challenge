@@ -1,0 +1,46 @@
+{
+  "name": "food-truck-challenge",
+  "version": "1.0.0",
+  "description": "implementation of the microsoft foodtruck challenge",
+  "main": "index.js",
+  "scripts": {
+    "test": "NODE_ENV=test mocha test/**/**.js",
+    "populate": "node populate-db.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/macmist/foodtruck-challenge.git"
+  },
+  "keywords": [
+    "API",
+    "Foodtruck",
+    "challenge",
+    "Node"
+  ],
+  "author": "Quentin Musy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/macmist/foodtruck-challenge/issues"
+  },
+  "homepage": "https://github.com/macmist/foodtruck-challenge#readme",
+  "devDependencies": {
+    "body-parser": "^1.20.0",
+    "chai-http": "^4.3.0",
+    "cors": "^2.8.5",
+    "corss": "^2.8.5",
+    "express": "^4.18.1",
+    "method-override": "^3.0.0",
+    "mongoose": "^6.3.4",
+    "morgan": "^1.10.0"
+  },
+  "dependencies": {
+    "chai": "^4.3.6",
+    "config": "^3.3.7",
+    "fast-csv": "^4.3.6",
+    "fs": "^0.0.1-security",
+    "mocha": "^10.0.0",
+    "path": "^0.12.7",
+    "sinon": "^7.5.0",
+    "sinon-mongoose": "^2.3.0"
+  }
+}
