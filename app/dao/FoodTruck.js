@@ -17,10 +17,13 @@ const FoodTruckDao = {
     getClosest: (latitude, longitude) => {
         return FoodTruck.aggregate([{
             $geoNear: {
-                near: { type: "Point", coordinates: [longitude, latitude],
-                spherical: true}
-            }
-        }]).exec()
+                distanceField: 'distance',
+                near: { type: "Point", coordinates: [longitude, latitude]},
+                spherical: true
+            }},
+            {$sort: {distance: -1}},
+            {$project:  {distance: 1, facilityType: 1, description:  1, items: 1, schedule: 1}}
+        ]).exec()
     }
 }
 

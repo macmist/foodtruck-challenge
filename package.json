@@ -4,6 +4,7 @@
   "description": "implementation of the microsoft foodtruck challenge",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "NODE_ENV=test mocha test/**/**.js",
     "populate": "node populate-db.js"
   },

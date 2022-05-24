@@ -15,7 +15,7 @@ const FoodTruckController = {
             return res.status(200).json(truck)
         }).catch(error  => {
             console.log(error)
-            return res.status(500).error(error)
+            return res.status(500).json(error)
         })
     },
 
@@ -25,11 +25,11 @@ const FoodTruckController = {
         if (!req.query.longitude)
             return res.status(400).json({error:  "Longitude is required"})
 
-        foodTruckDao.getClosest(req.query.latitude, req.query.longitude).then(trucks =>  {
+        foodTruckDao.getClosest(Number(req.query.latitude), Number(req.query.longitude)).then(trucks =>  {
             return res.status(200).json(trucks)
         }).catch(error => {
             console.log(error)
-            return res.status(500).error(error)
+            return res.status(500).json(error)
         })
     },
 
@@ -38,7 +38,7 @@ const FoodTruckController = {
             return res.status(200).json(truck)
         }).catch(error  => {
             console.log(error)
-            return res.status(500).error(error)
+            return res.status(500).json(error)
         })
     },
 

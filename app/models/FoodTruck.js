@@ -30,7 +30,7 @@ const FoodTruckSchema  = mongoose.Schema({
         }
     }
 }, {timestamps: true});
-
+FoodTruckSchema.index({location:  '2dsphere'})
 const FoodTruckModel = mongoose.model('FoodTruck', FoodTruckSchema);
 
 module.exports  = FoodTruckModel;
